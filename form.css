@@ -1,0 +1,67 @@
+.error{
+    font-family: 'Share Tech Mono', monospace;
+    font-style: italic;
+}
+
+input{
+    font-family: 'orbitron',sans-serif;
+    color: aliceblue;
+}
+
+button{
+    font-family: 'orbitron',sans-serif;
+    margin-top: 2rem;
+    height: 2.5rem;
+    width: 8rem;
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    border-radius: 8.5px;
+    box-shadow: 0 0 10px #ff00cc,
+        0 0 20px #3333ff,
+        0 0 10px aliceblue;
+    transition: all 0.3s ease-in-out;
+    color: aliceblue;
+    font-size: large;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.02);
+      box-shadow: 
+        0 0 20px #ff00cc,
+        0 0 40px #3333ff,
+        0 0 60px #ff00cc,
+        0 0 80px #3333ff;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
+}
+
+input{
+    background: rgba(20, 20, 35, 0.85);
+      border: 2px solid rgba(255, 0, 150, 0.7);
+      height: 3rem;
+      width: 18rem;
+      text-align: center;
+      font-size: large;
+      box-shadow: 
+        0 0 10px rgba(255, 0, 150, 0.7),
+        0 0 30px rgba(0, 255, 255, 0.7),
+        0 0 50px rgba(138, 43, 226, 0.7);
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease;
+}
+
+input:hover{
+    transform: translateY(-7px) scale(1.05);
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    justify-content:space-around;
+}

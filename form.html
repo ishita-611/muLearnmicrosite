@@ -1,0 +1,80 @@
+<html>
+    <head><title>form</title></head>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./form.css">
+    <body>
+        <form id="form">
+            <input type="text" id="firstName" placeholder="First name">
+            <p class="error" style="color: red;" id="texterror1"></p><br><br>
+            <input type="text" id="lastName" placeholder="Last name">
+            <p class="error" style="color: red;" id="texterror2"></p><br><br>
+            <input id="email" type="text" placeholder="Email">
+            <p class="error" style="color: red;" id="emailerror"></p><br><br>
+            <input type="tel" id="mobile" placeholder="mobile no.">
+            <p class="error" style="color: red;" id="numbererror"></p>
+            <br><br>
+            <input type="text" placeholder="Department"><br><br><br>
+            <div class="btn"><button type="submit">Submit</button>
+            <button type="reset" onclick="reset()">Reset</button></div>
+        </form>
+        <script>
+            document.getElementById("form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    check();
+});
+
+document.getElementById("form").addEventListener("reset", function(event) {
+    event.preventDefault();
+
+    reset(); 
+});
+
+function check(){
+
+            let isValid=true;
+            let email=document.getElementById("email").value.trim();
+            let firstName=document.getElementById("firstName").value.trim();
+            let lastName=document.getElementById("lastName").value.trim();
+            let mobile=document.getElementById("mobile").value.trim();
+            
+            document.getElementById("texterror1").innerText="";
+            document.getElementById("texterror2").innerText="";
+            document.getElementById("emailerror").innerText="";
+            document.getElementById("numbererror").innerText="";
+
+            
+                if (!email.includes("@")){
+                    document.getElementById("emailerror").innerText="invalid email format";
+                    isValid=false;
+                }
+
+                if (/\d/.test(firstName)){
+                    document.getElementById("texterror1").innerText="name cannot contain numbers";
+                    isValid=false;
+                }
+
+                if (/\d/.test(lastName)){
+                    document.getElementById("texterror2").innerText="name cannot contain numbers";
+                    isValid=false;
+                }
+
+                if (isNaN(mobile)){
+                    document.getElementById("numbererror").innerText="Mobile number cannot contain other characters";
+                    isValid=false;
+                }
+
+                if (isValid){
+                    window.location.href="./submitted.html";
+                }
+
+                
+            }
+
+            function reset(){
+                window.location.href="./form.html";
+            }
+        </script>
+    </body>
+</html>

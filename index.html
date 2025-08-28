@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>µLearn CET Tech Team</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      color: #0ff;
+      text-shadow: 
+        0 0 5px #0ff,
+        0 0 15px #0ff,
+        0 0 25px #0ff;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #fff;
+      opacity: 0.9;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    
+    .cyber-card {
+      background: rgba(20, 20, 35, 0.85);
+      border: 2px solid rgba(255, 0, 150, 0.7);
+      border-radius: 20px;
+      padding: 2rem 2rem 2rem 1rem;
+      text-align: center;
+      box-shadow: 
+        0 0 10px rgba(255, 0, 150, 0.7),
+        0 0 30px rgba(0, 255, 255, 0.7),
+        0 0 50px rgba(138, 43, 226, 0.7);
+      backdrop-filter: blur(10px);
+      max-width: 350px;
+      transition: transform 0.3s ease;
+    }
+
+    .cyber-card:hover {
+      transform: translateY(-10px) scale(1.05);
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #ff00cc;
+      text-shadow: 
+        0 0 3px #ff00cc,
+        0 0 7px #ff00cc,
+        0 0 15px #ff00cc;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #fff;
+      opacity: 0.85;
+      margin-bottom: 1.5rem;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    
+    .neon-btn {
+      height:60px;
+      width: 200px;
+      font-size: 1.5rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(90deg, #ff00cc, #3333ff);
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 
+        0 0 10px #ff00cc,
+        0 0 20px #3333ff,
+        0 0 40px #ff00cc;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .neon-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 
+        0 0 20px #ff00cc,
+        0 0 40px #3333ff,
+        0 0 60px #ff00cc,
+        0 0 80px #3333ff;
+    }
+
+    .btn{
+       margin-top: 4rem;
+       display:flex;
+       justify-content: center;
+    }
+
+    #countdown{
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 0 0 10px #off, 0 0 20px #0ff;
+      color: #ff00cc;
+      text-shadow: 
+        0 0 3px #ff00cc,
+        0 0 7px #ff00cc,
+        0 0 15px #ff00cc;
+      margin-top: 2rem;
+    }
+
+    .head{
+      margin-left: 15%;
+    }
+
+    .leaderboard {
+  background: rgba(0,0,0,0.4);
+  border: 2px solid #0ff;
+  border-radius: 12px;
+  padding: 15px;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 8px #0ff;
+  padding-top: 4px;
+}
+
+.leaderboard h3 {
+  margin-bottom: 10px;
+  color: #f0f;
+  text-align: center;
+}
+
+.leaderboard ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leaderboard li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="head"><h1>µLearn CET Tech Team Recruitment Call</h1>
+    <p>The future doesn't wait. Neither should you. 
+        <br>µLearn CET is opening its gates to the next wave of builders, breakers, and dreamers.
+        <br>Whether you code in the dark, design futuristic worlds, or bend data to your will — this is your arena.
+    </p></div>
+    <div id="countdown">
+      <script>
+        var deadline=new Date("Sept 3,2025 00:00:00").getTime();
+        var timer=setInterval(function(){
+          var now=new Date().getTime();
+        
+        var distance=deadline-now;
+        var days=Math.floor(distance/(1000*60*60*24));
+        var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+        var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+        var seconds=Math.floor((distance%(1000*60))/1000);
+        document.getElementById("countdown").innerHTML=days+"d "+hours+"h "+minutes+"m "+seconds+"s "+"left!";
+        if (distance<0){
+          clearInterval(timer);
+          document.getElementById("countdown").innerHTML="Registrations closed";
+        }
+      },1000);
+
+      </script>
+    </div>
+  </header>
+
+  
+  <div class="grid">
+    <div class="cyber-card">
+      <h2>Karma-Powered Growth</h2><br>
+      <ul>
+      <li><p>Earn Karma Points by contributing, teaching, and collaborating.</p></li>
+      <li><p>Progress through levels and unlock exclusive opportunities</p></li>
+      <li><p>Top contributors got featured on μLearn's leaderboard.</p></li>
+      <li><p>Growth is transparent, measurable, and fun.</p></li>
+      </ul><br>
+      <div class="leaderboard">
+  <h3>🔥 Top Contributors This Month</h3>
+  <ol>
+    <li><span>1.</span> Alan <span class="points">11.7k karma pts</span></li>
+    <li><span>2.</span> Ebin <span class="points">6.4k karma pts</span></li>
+  </ol>
+</div>
+
+    </div>
+    <div class="cyber-card">
+      <h2>Learning Circles & Interest Groups</h2><br>
+      <ul>
+        <li><p>Focused peer groups for Web Dev, AI/ML, Cybersecurity, Design & more</p></li>
+        <li><p>Learn by teaching, sharing, and building together.</p></li>
+        <li><p>Join circles based on your passion and grow with like-minded peers.</p></li>
+        <li><p>Collaborate on mini-projects and showcase them at campus events & hackathons.</p></li>
+      </ul><br>
+      <span><p style="font-style: italic;">“The strength of the team is each individual member. The strength of each member is the team.”</p></span>
+    </div>
+    <div class="cyber-card">
+      <h2>μMENT: Turning Ideas into Impact</h2><br>
+      <p>This summer, μLearn CET hosted μMENT, a one-of-a-kind, month-long build-a-thon.</p>
+      <ul>
+        <li><p>Students teamed up to create projects across tech, design, health, AI, and more.</p></li>
+        <li><p>Weekly checkpoints kept the momentum alive, with feedback from faculty & alumni.</p></li>
+        <li><p>Winning teams walked away with prizes at every stage — and tons of hands-on experience.</p></li>
+      </ul><br>
+      <p>μMENT proved that with the right spark, vacations can turn into innovation marathons.</p>
+    </div>
+    <div class="cyber-card">
+        <h2>Industry-Powered Innovation</h2>
+        <p>μLearn isn't just a campus club — it's backed by the tech industry itself.</p>
+        <ul>
+          <li><p>The Group of Technology Companies (GTech) — the trade association of Kerala's IT industry — is the core industry backer behind μLearn.</p></li>
+          <li><p>At the 'Permute 2025' skilling festival in Thiruvananthapuram, μLearn rolled out new partnerships with major names including Google, Amazon, Flipkart, Arduino, and QSeverse.</p></li>
+        </ul>
+        <p>At μLearn, you're not just learning — you're stepping into the same ecosystem that powers India's fastest-growing tech talent.</p>
+    </div>
+  </div>
+  <div class="btn"><button class="neon-btn" onclick="apply()">APPLY NOW</button></div>
+
+  <script>
+    function apply(){
+      window.location.href = "./form.html";
+    }
+  </script>
+</body>
+</html>
